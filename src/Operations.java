@@ -42,11 +42,33 @@ public class Operations {
         }
         return result;
     }
+    public static String OROperation(String num1,String num2)
+    {
+        if(num1.length()<num2.length())
+        {
+            num1=0+num1;
+        }
+        if(num1.length()>num2.length())
+        {
+            num2=0+num2;
+        }
+        String result="";
+        for(int i=num1.length()-1;i>=0;i--)
+        {
+            if(num1.charAt(i)=='0' && num2.charAt(i)=='0')
+            {
+                result=0+result;
+            }
+            else
+                result=1+result;
+        }
+        return result;
+    }
 
     public static void main(String[] args) {
         String num1=Conversion(13);
         String num2=Conversion(7);
         System.out.println("The result after AND operation is: "+AndOperation(num1,num2));
-
+        System.out.println("The result after OR operation is: "+OROperation(num1,num2));
     }
 }
