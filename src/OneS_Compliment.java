@@ -21,7 +21,7 @@ public class OneS_Compliment {
         }
         return res;
     }
-    public static String Complimet(int num)
+    public static String Compliment1s(int num)
     {
         String result=Conversion(num);
         String result1="";
@@ -36,8 +36,8 @@ public class OneS_Compliment {
             }
         }
         return result1;
-
     }
+
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -45,6 +45,8 @@ public class OneS_Compliment {
         int decimal = sc.nextInt();
         String result=Conversion(decimal);
         System.out.println(result);
-        System.out.println("The 1's Compliment is: "+Complimet(decimal));
+        System.out.println("The 1's Compliment is: "+Compliment1s(decimal));
+
+
     }
 }
