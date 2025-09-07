@@ -21,6 +21,14 @@ public class Setting_ith_Bit {
         return result;
     }
 
+    public static int Remove_last_SetBit(int num)
+    {
+        int result=num & num-1;
+        return result;
+    }
+
+
+
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -34,6 +42,8 @@ public class Setting_ith_Bit {
         System.out.println(result1);
         int result2=Toggle_ithBit(num,i);
         System.out.println(result2);
+        int result3=Remove_last_SetBit(num);
+        System.out.println(result3);
 
 
     }
