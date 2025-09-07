@@ -14,6 +14,14 @@ public class Setting_ith_Bit {
         return result;
     }
 
+    public static int Toggle_ithBit(int num,int i)
+    {
+        int n=1<<i;
+        int result=num ^ n;
+        return result;
+    }
+
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("The number is: ");
@@ -24,6 +32,8 @@ public class Setting_ith_Bit {
         System.out.println(result);
         int result1=Clear_ithBit(num,i);
         System.out.println(result1);
+        int result2=Toggle_ithBit(num,i);
+        System.out.println(result2);
 
 
     }
