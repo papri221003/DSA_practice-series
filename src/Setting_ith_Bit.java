@@ -40,17 +40,13 @@ public class Setting_ith_Bit {
     public static int Count_SetBit(int num)
     {
         int count=0;
-        while(num>1)
+        while(num>0)
         {
             if((num&1)==1)
             {
                 count++;
-                num=num>>1;
             }
-        }
-        if(num==1)
-        {
-            count ++;
+            num=num>>1;
         }
         return count;
     }
@@ -76,7 +72,5 @@ public class Setting_ith_Bit {
         System.out.println(result4);
         int result5=Count_SetBit(num);
         System.out.println(result5);
-
-
     }
 }
