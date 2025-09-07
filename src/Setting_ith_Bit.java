@@ -27,6 +27,34 @@ public class Setting_ith_Bit {
         return result;
     }
 
+    public static boolean Check_Power_Two(int num)
+    {
+        if((num & (num-1))==0)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public static int Count_SetBit(int num)
+    {
+        int count=0;
+        while(num>1)
+        {
+            if((num&1)==1)
+            {
+                count++;
+                num=num>>1;
+            }
+        }
+        if(num==1)
+        {
+            count ++;
+        }
+        return count;
+    }
+
 
 
 
@@ -44,6 +72,10 @@ public class Setting_ith_Bit {
         System.out.println(result2);
         int result3=Remove_last_SetBit(num);
         System.out.println(result3);
+        boolean result4=Check_Power_Two(num);
+        System.out.println(result4);
+        int result5=Count_SetBit(num);
+        System.out.println(result5);
 
 
     }
