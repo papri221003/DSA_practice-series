@@ -70,6 +70,29 @@ public class Array_To_LinkedList {
         return head;
 
     }
+    public static Node deleteKth(Node head,int y)
+    {
+        if(y==1) {
+            head = head.next;
+            return head;
+        }
+        Node curr=head.next;
+        Node prev=head;
+        int count=1;
+        while(curr.next!=null)
+        {
+            count++;
+            if(count==y)
+            {
+                prev.next=curr.next;
+                break;
+            }
+            prev=prev.next;
+            curr=curr.next;
+        }
+        return head;
+
+    }
     public static void main(String[] args) {
         int arr[]={4,7,8,5,6,2};
         Node head=null;
@@ -82,6 +105,6 @@ public class Array_To_LinkedList {
         Node head2=deleteFirst(head);
         print(head2);
         print(deleteWithValueX(head2,8));
-
+        print(deleteKth(head2,1));
     }
 }
