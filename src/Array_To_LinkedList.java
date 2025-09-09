@@ -51,6 +51,25 @@ public class Array_To_LinkedList {
         head=head.next;
         return head;
     }
+    public static Node deleteWithValueX(Node head,int x)
+    {
+        if(head.data==x)
+        {
+            head=head.next;
+            return head;
+        }
+        Node curr=head.next;
+        Node prev=head;
+        while(curr.data!=x)
+        {
+            prev=prev.next;
+            curr=curr.next;
+        }
+        prev.next=curr.next;
+
+        return head;
+
+    }
     public static void main(String[] args) {
         int arr[]={4,7,8,5,6,2};
         Node head=null;
@@ -60,8 +79,9 @@ public class Array_To_LinkedList {
         }
         System.out.println(head.data);
         print(head);
-        deleteFirst(head);
-        print(deleteFirst(head));
+        Node head2=deleteFirst(head);
+        print(head2);
+        print(deleteWithValueX(head2,8));
 
     }
 }
