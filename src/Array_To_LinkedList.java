@@ -108,3 +108,60 @@ public class Array_To_LinkedList {
         print(deleteKth(head2,1));
     }
 }
+
+
+
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+
+/*
+class Solution {
+    private int getsize(ListNode head)
+    {
+        ListNode curr=head;
+        int count=0;
+        if(head==null)
+        {
+            return 0;
+        }
+        while(curr!=null)
+        {
+            count++;
+        }
+        return count;
+    }
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        int size=getsize(head);
+        int target=(size-n)+1;
+        if(target==1) {
+            head = head.next;
+            return head;
+        }
+        ListNode curr=head.next;
+        ListNode prev=head;
+        int pos=1;
+        while(curr.next!=null)
+        {
+            pos++;
+            if(pos==target)
+            {
+                prev.next=curr.next;
+                break;
+            }
+            prev=prev.next;
+            curr=curr.next;
+        }
+        return head;
+
+    }
+}
+*/
