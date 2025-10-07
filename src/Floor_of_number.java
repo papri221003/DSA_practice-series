@@ -1,5 +1,5 @@
-public class Celling_of_number {
-    public static int celling(int arr[],int target)
+public class Floor_of_number {
+    public static int floor(int arr[],int target)
     {
         int start=0;
         int end=arr.length-1;
@@ -10,21 +10,21 @@ public class Celling_of_number {
             {
                 return arr[mid];
             }
-            else if(arr[mid]<target)
-            {
-                start=mid+1;
-            }
-            else
+            else if(arr[mid]>target)
             {
                 end=mid-1;
             }
+            else
+            {
+                start=mid+1;
+            }
         }
-        return arr[start];
+        return arr[end];
     }
     public static void main(String[] args) {
         int arr[]={2, 3, 5, 9, 14, 16, 18};
-        int target=6;
-        int result=celling(arr,target);
+        int target=7;
+        int result=floor(arr,target);
         System.out.println(result);
 
     }
