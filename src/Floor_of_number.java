@@ -26,6 +26,8 @@ public class Floor_of_number {
         int target=7;
         int result=floor(arr,target);
         System.out.println(result);
+        char ch='a';
+        System.out.println((int)ch);
 
     }
 }
