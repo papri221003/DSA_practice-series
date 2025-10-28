@@ -21,12 +21,12 @@ public class Toggle_to_bin_dec_and_again {
         return decimal;
     }
     public static void main(String[] args) {
-        int n=101;
+        int n=10;
         if(n<=100) {
             System.out.println(toggle(n));
         }
         else {
-            System.out.println("WRONG INPUT");
+            System.out.println("WRONG INPUT!.....");
         }
 
     }
