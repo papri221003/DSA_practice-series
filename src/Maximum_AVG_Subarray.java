@@ -1,21 +1,24 @@
 public class Maximum_AVG_Subarray {
     public static double findMaxAverage(int[] nums, int k) {
-        // Step 1: Find sum of first k elements
-        double sum = 0;
-        for (int i = 0; i < k; i++) {
-            sum += nums[i];
+        int sum=0;
+        for(int i=0;i<k;i++)
+        {
+            sum+=nums[i];
         }
+        int maxSum=sum;
+        int startIndex=0;
+        int endIndex=k;
+        while(endIndex<nums.length)
+        {
+            sum-=nums[startIndex];
+            startIndex++;
 
-        double maxSum = sum;
+            sum+=nums[endIndex];
+            endIndex++;
 
-        // Step 2: Use sliding window
-        for (int i = k; i < nums.length; i++) {
-            sum += nums[i] - nums[i - k]; // Slide the window
-            maxSum = Math.max(maxSum, sum);
+            maxSum=Math.max(sum,maxSum);
         }
-
-        // Step 3: Return maximum average
-        return maxSum / k;
+        return (double)maxSum/k;
     }
 
     public static void main(String[] args) {
