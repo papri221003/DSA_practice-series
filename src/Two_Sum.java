@@ -2,20 +2,21 @@ import java.util.*;
 public class Two_Sum {
     public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer,Integer>map=new HashMap<>();
-        int result[]=new int[2];
+        int arr[]=new int[2];
         for(int i=0;i<nums.length;i++)
         {
             int sum=target-nums[i];
             if(map.containsKey(sum))
             {
-                result[0]=i;
-                result[1]=map.get(sum);
-                return result;
+                arr[0]=i;
+                arr[1]=map.get(sum);
             }
-            map.put(nums[i],i);
+            else
+            {
+                map.put(nums[i],i);
+            }
         }
-
-        return result;
+        return arr;
     }
 
     public static void main(String[] args) {
